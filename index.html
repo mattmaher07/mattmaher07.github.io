@@ -329,18 +329,6 @@
             color: inherit;
         }
 
-        .work-item:nth-child(2) {
-            background: linear-gradient(135deg, #2a0000 0%, #4d0000 100%);
-        }
-
-        .work-item:nth-child(3) {
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a0000 100%);
-        }
-
-        .work-item:nth-child(4) {
-            background: linear-gradient(135deg, #330000 0%, #660000 100%);
-        }
-
         .work-item:hover {
             transform: scale(1.02);
             border-color: var(--color-accent);
@@ -457,8 +445,8 @@
 
         /* Scroll Animations */
         .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
+            opacity: 1;
+            transform: translateY(0);
             transition: opacity 0.8s ease, transform 0.8s ease;
         }
 
@@ -570,30 +558,6 @@
                             </div>
                         </a>
                     </div>
-                    <div class="work-item">
-                        <div class="work-overlay">
-                            <h3 class="work-title">Dark Souls Tribute</h3>
-                            <p class="work-description">
-                                Souls-like combat system with precise hitboxes and challenging boss fights
-                            </p>
-                        </div>
-                    </div>
-                    <div class="work-item">
-                        <div class="work-overlay">
-                            <h3 class="work-title">Rogue Runner</h3>
-                            <p class="work-description">
-                                Roguelike with procedural generation and deep progression systems
-                            </p>
-                        </div>
-                    </div>
-                    <div class="work-item">
-                        <div class="work-overlay">
-                            <h3 class="work-title">Arena Legends</h3>
-                            <p class="work-description">
-                                Multiplayer battle arena with unique character abilities and team synergies
-                            </p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -637,7 +601,7 @@
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -673,3 +637,11 @@
         // Parallax effect for hero decoration
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
+            const decoration = document.querySelector('.hero-decoration');
+            if (decoration) {
+                decoration.style.transform = `translateY(${scrolled * 0.3}px)`;
+            }
+        });
+    </script>
+</body>
+</html>
