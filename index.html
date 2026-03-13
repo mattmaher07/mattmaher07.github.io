@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+I see you've already made some changes! I notice you:
+
+Updated the About Me section to be more accurate
+Added an image for The Hike (the-hike.png)
+But you only have 1 game showing instead of 3
+
+Here's the updated code with all 3 games and the image styling you need:
+html<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -329,10 +336,27 @@
             color: inherit;
         }
 
+        .work-item:nth-child(2) {
+            background: linear-gradient(135deg, #2a0000 0%, #4d0000 100%);
+        }
+
+        .work-item:nth-child(3) {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0000 100%);
+        }
+
         .work-item:hover {
             transform: scale(1.02);
             border-color: var(--color-accent);
             box-shadow: 0 10px 40px rgba(255, 0, 0, 0.3);
+        }
+
+        .work-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
 
         .work-overlay {
@@ -346,6 +370,7 @@
             transform: translateY(100%);
             transition: transform 0.4s ease;
             border-top: 2px solid var(--color-accent);
+            z-index: 1;
         }
 
         .work-item:hover .work-overlay {
@@ -517,13 +542,13 @@
                 <div class="about-grid">
                     <div class="about-text">
                         <p>
-                            I’m a gameplay-oriented developer with experience implementing combat systems, 
+                            I'm a gameplay-oriented developer with experience implementing combat systems, 
                             progression mechanics, and interactive systems in Unreal Engine through academic and 
                             independent projects.
                         </p>
                         <p>
                             I focus on writing clean, scalable code while designing gameplay that feels responsive and rewarding.
-                            I’m particularly interested in system design, player feedback, and performance-conscious implementation.
+                            I'm particularly interested in system design, player feedback, and performance-conscious implementation.
                         </p>
                     </div>
                     <div>
@@ -548,18 +573,36 @@
                 <h2 class="section-title">Featured Games</h2>
                 <div class="work-grid">
                     <div class="work-item">
-    <a href="https://ironorchardgames.itch.io/the-hike" target="_blank" rel="noopener noreferrer">
-
-        <img src="the-hike.png" alt="The Hike Gameplay Screenshot" class="work-image">
-
-        <div class="work-overlay">
-            <h3 class="work-title">The Hike</h3>
-            <p class="work-description">
-                First-person survival adventure with crafting, exploration, and mysterious dangers lurking in the wilderness
-            </p>
-        </div>
-    </a>
-</div>
+                        <a href="https://ironorchardgames.itch.io/the-hike" target="_blank" rel="noopener noreferrer">
+                            <img src="the-hike.png" alt="The Hike Gameplay Screenshot" class="work-image">
+                            <div class="work-overlay">
+                                <h3 class="work-title">The Hike</h3>
+                                <p class="work-description">
+                                    First-person survival adventure with crafting, exploration, and mysterious dangers lurking in the wilderness
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="work-item">
+                        <a href="https://mrmaherdev.itch.io/20251942-clone" target="_blank" rel="noopener noreferrer">
+                            <div class="work-overlay">
+                                <h3 class="work-title">2025 (1942 Clone)</h3>
+                                <p class="work-description">
+                                    A 2.5D recreation of the classic arcade game 1942
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="work-item">
+                        <a href="https://mrmaherdev.itch.io/irminsul" target="_blank" rel="noopener noreferrer">
+                            <div class="work-overlay">
+                                <h3 class="work-title">Irminsul</h3>
+                                <p class="work-description">
+                                    First-person shooter about escaping Nazis from an underground POW facility
+                                </p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
