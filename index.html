@@ -89,7 +89,7 @@
             transition: color 0.3s ease;
         }
 
-        .nav-links a::after {
+        . a::after {
             content: '';
             position: absolute;
             bottom: -5px;
@@ -100,7 +100,7 @@
             transition: width 0.3s ease;
         }
 
-        .nav-links a:hover::after {
+        . a:hover::after {
             width: 100%;
         }
 
@@ -475,7 +475,7 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .nav-links {
+            . {
                 gap: 1.5rem;
             }
 
@@ -504,6 +504,7 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#work">Work</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="resume.pdf" target="_blank">Resume</a></li>
                 </ul>
             </nav>
         </div>
@@ -616,6 +617,9 @@
                         </p>
                         <p>
                             <strong>Discord:</strong> <a href="#">Dfeartreaper</a>
+                        </p>
+                        <p>
+                            <a href="resume.pdf" download class="cta-button" style="display: inline-block; margin-top: 1rem; padding: 0.75rem 1.5rem; font-size: 0.9rem;">Download Resume</a>
                         </p>
                         <div class="social-links">
     <a href="https://www.linkedin.com/in/matthew-maher-89564aa5" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
